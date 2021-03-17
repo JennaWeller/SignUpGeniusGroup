@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Appointments";
+}
+@{
+    ViewData["Title"] = "Scheduled Apppointments";
+}
+@model IEnumerable<SignUpItem>
+@*This view page shows all of the scheduled appointments that are stored in the database*@
+<body>
+    <div class="container">
+        <header>
+            <br />
+            <h1 class="text-center">Appointments</h1>
+            <br />
+        </header>
+
+        <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name of Group</th>
+                    <th>Size of Group</th>
+                    <th> Email </th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.NameOfGroup </td>
+                        <td> @x.SizeOfGroup </td>
+                        <td>@x.Email </td>
+                        <td> @x.Phone</td>
+                        <td>@x.date</td>
+                        <td>@x.time</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</body>

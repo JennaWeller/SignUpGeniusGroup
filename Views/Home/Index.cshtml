@@ -1,0 +1,29 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+
+@model IEnumerable<SignUpItem>
+
+<div class="text-center">
+    <h1 class="display-4">Layton Utah Temple Tours</h1>
+    <img src="~/img/laytontemple.jpg" />
+
+    <h2> General Tour Instructions</h2>
+    <div class="text-center">
+        <p>Masks are required</p>
+        <p>Park on Rosewood (west side of the temple) and meet at the Visitors Center trailer</p>
+    </div>
+    @*The button sends you to the Sign Up Page. Shows all of the available times that can be selected. *@
+    <button class="btn btn-secondary btn-outline-black btn-large btn-block" type="button" onclick="location.href='@Url.Action("SignUpPage","Home")'">
+        Sign up for a tour!
+    </button>
+
+    <br />
+    <p>COMING SOON!</p>
+    <p>We Will soon have a new schedule since we have been asked to stop all outside tours.</p>
+    <p>Use the "quantity" field to let us know how many people will be in your group. Thank you!</p>
+</div>
+
+
+
+
+
+

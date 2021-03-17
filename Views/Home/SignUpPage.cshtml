@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Time Slot Selection";
+}
+@{
+}
+@model IEnumerable<SignUpTime>
+@*This is where the visior selects the time slot*@
+
+<div class="container">
+    <header>
+        <br />
+        <h1 class="text-center">Please Select a Time Slot</h1>
+        <p class="text-center">(you will enter your information on the next page)</p>
+        <br />
+    </header>
+
+    <!-- Loops through all the available date and times-->
+    @foreach (var x in Model)
+    {
+        <!--this button will pass the time and date to the next page and allow it to be added as part of the form-->
+        <button type="button" class="btn btn-outline-dark btn-lg btn-block" onclick="location.href='@Url.Action("SignUpForm", "Home", new { date = x.Day, time = x.Time })'">@x.Day At @x.Time</button>
+        <br />
+    }
+
+</div>
